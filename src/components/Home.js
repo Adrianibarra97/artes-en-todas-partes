@@ -1,25 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Promotions } from './Promotions';
+import { Carousel } from '../components/Carousel';
+import { NavLink } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import { Promotions } from './Promotions';
 
 export const Home = () => {
   return (
     <div className = "home">
-      <h1>
-        Hola, soy <strong>Adrian Joel Ibarra Bilbao</strong>, desarrollador de software.
-        Actualmente ofrezco <strong>servicios web</strong> para potenciar tu negocio.
-      </h1>
-
-      <h2 className = "title">
-        Creando sitios webs visibles y relevante para los buscadores y
-        de gran escalabilidad para adaptarse al crecimiento del mismo.
-        <Link to = "/contact">Contactarme</Link>
-      </h2>
-
-      <section className = "lasts-works"> 
-        <h2 className = "heading">Algunos proyectos realizados.</h2>
-        <p>Estos son los proyectos mas recientes: </p>
-        <Promotions limit = "3" />  
+      <h3 className = "home-h1">
+        Lo nuevo!
+      </h3>
+      <section className = "home-section-carousel">
+        <div className = "home-carousel">
+          <Carousel />
+        </div>
+      </section>
+      <section className = "home-section-media">
+        <div className = "home-media">
+          <h4 className = "home-text-media">Para una atención personalizada buscanos en nuestras redes</h4>
+          <div className = "home-logos-media">
+            <NavLink 
+              className = "home-logo-media bi bi-instagram"
+              to = "https://instagram.com/"
+              target = "_BLANK"
+            />
+            <NavLink
+              className = "home-logo-media bi bi-facebook"
+              to = "https://facebook.com/"
+              target = "_BLANK"
+            />
+            <NavLink
+              className = "home-logo-media bi bi-twitter"
+              to = "https://twitter.com/"
+              target = "_BLANK"
+            />
+            <NavLink
+              className = "home-logo-media bi bi-whatsapp"
+              to = "https://whatsapp.com/"
+              target = "_BLANK"
+            />
+          </div>
+        </div>
       </section>
     </div>
   )
