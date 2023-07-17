@@ -2,17 +2,44 @@ import React from 'react';
 
 export const Footer = () => {
   return (
-    <Footer className = "footer">
-      <h2>Artes en todas partes - AdriWebs&copy;</h2>
-      <div>
-        <h6>Métodos de pago</h6>
+    <footer className = "footer">
+      <div className = "footer-pays">
+        <div className = "footer-pays-item">
+          <h6>Métodos de pago</h6>
+          <ul>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+          </ul>
+        </div>
+        <div className = "footer-pays-item">
+          <h6>Métodos de envío</h6>
+          <ul>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+           <li>@</li>
+          </ul>
+        </div>
+        <div className = "footer-pays-item">
+          <h6>contactos</h6>
+          <div>
+           <li>@mail: artesEnTodasPartes@gmail.com</li>
+           <li>@Teléfono: 1543765958</li>
+           <li>@Dirección: Matanza 23254, San Martín.</li>
+          </div>
+        </div>
       </div>
-      <div>
-        <h6>Métodos de envío</h6>
+      <div className = "footer-devs">
+        <p>Artes en todas partes - AdriWebs&copy;</p>
       </div>
-      <div>
-        <h6>contactos</h6>
-      </div>
-    </Footer>
+    </footer>
   )
 }

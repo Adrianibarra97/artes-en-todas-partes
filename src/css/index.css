@@ -64,16 +64,6 @@ code {
 }
 
 /* BODY SECTION */
-.product, .contact {
-  display: flex;
-  position: relative;
-  top: auto;
-  justify-content: center;
-  align-items: center;
-  background: rgb(241, 203, 241);
-  width: 100%;
-  height: 600px;
-}
 
 /* Home */
 .home {
@@ -115,14 +105,17 @@ code {
   overflow: hidden;
 }
 
-.home-section-media {
+/* SIDEBAR MediaBar */
+
+.mediabar-section-media {
   display: block;
+  position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.home-media {
+.mediabar-media {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -131,7 +124,7 @@ code {
   overflow: hidden;
 }
 
-.home-text-media {
+.mediabar-text-media {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -141,7 +134,7 @@ code {
   text-align: center;
 }
 
-.home-logos-media {
+.mediabar-logos-media {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -152,7 +145,7 @@ code {
   justify-content: center;
 }
 
-.home-logo-media {
+.mediabar-logo-media {
   display: flex;
   margin: 0.5%;
   width: auto;
@@ -166,18 +159,108 @@ code {
   transition: all 0.4s;
 }
 
-.home-logo-media:hover {
+.mediabar-logo-media:hover {
   border: 2px solid rgb(229, 130, 212);
   color: rgb(237, 163, 224)
+}
+
+/* Product and Contact */
+
+.product, .contact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  top: auto;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 203, 241);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.product .home-section, 
+.contact .home-section {
+  border: 2px solid black;
+  height: 350px;
+  width: 100%;
 }
 
 /* FOOTER */
 
 .footer {
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
-  height: 200px;
+  height: auto;
   background: rgb(241, 203, 241);
+  overflow: hidden;
+}
+
+.footer-pays {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-pays-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid black;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.footer-pays-item  ul,
+.footer-pays-item div {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+  margin: 0% 10%;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.footer-pays-item div {
+  flex-direction: row;
+}
+
+.footer-pays-item ul li,
+.footer-pays-item div li {
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0.5%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.footer-pays-item div li {
+  height: auto;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.footer-devs {
+  display: flex;
+  position: relative;
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(93, 35, 88);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
