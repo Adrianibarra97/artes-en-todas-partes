@@ -4,11 +4,14 @@ import { Navigation } from '../components/layout/Navigation';
 import { Footer } from '../components/layout/Footer';
 import { Home } from '../components/Home';
 import { Product } from '../components/Product';
-import { Contact } from '../components/Contact';
+import { Contact } from "../components/Contact";
 
 export const PrincipalRoutes = () => {
   return (
     <BrowserRouter>
+      {/* Contact */}
+      <Contact />
+
       {/* Header and Nav */}
       <Navigation />
             
@@ -18,8 +21,7 @@ export const PrincipalRoutes = () => {
           <Route path = "/" element = { <Navigate to = "/home" /> } />
           <Route path = "/home" element = { <Home /> } />
           <Route path = "/products" element = { <Product /> } />
-          <Route path = "/contact" element = { <Contact /> } />
-          <Route path = "*" element = { 
+          <Route path = "*" element = {
             <div className = "page">
               <h1 className = "heading">Error 404</h1>
             </div>

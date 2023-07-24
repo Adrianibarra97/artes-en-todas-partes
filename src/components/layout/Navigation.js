@@ -2,17 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
+  const handleContact = () => {
+    const contactForm = document.getElementById('contact-component')
+    contactForm.style.display = 'flex'
+  }
+
   return (
     <header className = "header">
-      {/* <div className = "logo">
-        <figure className = "logo-figure">
-          <img 
-            className = "logo-img"
-            src = {"/images/logo2.png"}
-            alt = "logo"
-          />
-        </figure>
-      </div> */}
       <nav className = "navbar navbar-expand-lg navbar-dark bg-dark nav-style">
         <div className = "container-fluid">
           <button
@@ -43,12 +39,10 @@ export const Navigation = () => {
                   to = "/products"
                 >Productos</NavLink>
               </li>
-              <li className = "nav-item">
-                <NavLink
-                  className = "nav-link active nav-link-component"
-                  to = "/contact"
-                >Contacto</NavLink>
-              </li>
+              <button
+                className = "nav-item contact-button nav-link-component"
+                onClick = { () => handleContact() }
+              >Contacto</button>
             </ul>
             <form className = "d-flex">
               <input 

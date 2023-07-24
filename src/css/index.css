@@ -27,41 +27,25 @@ code {
   height: auto;
 }
 
-  /* Logo */
-.logo {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 40%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.logo-figure {
-  display: block;
-  position: relative;
-  height: 70%;
-  width: 30%;
-  overflow: hidden;
-}
-
-.logo-img {
-  display: block;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
 .nav-style {
   background-color: rgb(93, 35, 88) !important;
   font-weight: bolder;
 }
 
-.nav-style li .nav-link-component:focus {
+.nav-style .nav-link-component:focus {
   color: rgb(225, 169, 249) !important;
 }
+
+.contact-button {
+  display: flex;
+  font-weight: bolder;
+  color: rgb(238, 229, 229);
+  border: none;
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 
 /* BODY SECTION */
 
@@ -105,8 +89,8 @@ code {
   overflow: hidden;
 }
 
-/* SIDEBAR MediaBar */
 
+/* SIDEBAR MediaBar */
 .mediabar-section-media {
   display: block;
   position: relative;
@@ -164,9 +148,9 @@ code {
   color: rgb(237, 163, 224)
 }
 
-/* Product and Contact */
 
-.product, .contact {
+/* Product */
+.product {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -179,15 +163,56 @@ code {
   overflow: hidden;
 }
 
-.product .home-section, 
-.contact .home-section {
-  border: 2px solid black;
-  height: 350px;
+.product .product-section {
+  height: 510px;
   width: 100%;
 }
 
-/* FOOTER */
+.card-container {
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+  border: 1px solid rgb(39, 21, 39);
+  background-color: rgb(93, 35, 88);
+  overflow-y: scroll;
+}
 
+/* Contact */
+.contact-container {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(187, 154, 227, 0.5);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-container-form {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding: 2%;
+  background-color: rgba(67, 29, 143, 0.4);
+  border-radius: 10px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.contact-exit-button {
+  position: absolute;
+  top: -1%;
+  right: 0;
+  font-size: 1.3em;
+}
+
+
+/* FOOTER */
 .footer {
   display: flex;
   flex-direction: column;
@@ -264,3 +289,11 @@ code {
   overflow: hidden;
 }
 
+
+/* Responsive */
+
+@media only screen and (max-width: 992px) {
+  .contact-button {
+    padding-left: 0;
+  }
+}
